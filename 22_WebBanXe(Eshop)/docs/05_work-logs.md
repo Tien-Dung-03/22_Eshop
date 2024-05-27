@@ -2,7 +2,7 @@
 
 ### 5.1 Phân công
 
-![ER Diagram](./images/pccv.png)
+![Phân công công việc](./images/pccv.PNG)
 
 ### 5.2 Nhật ký
 
