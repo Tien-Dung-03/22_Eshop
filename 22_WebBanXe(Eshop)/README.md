@@ -36,14 +36,14 @@ Hướng dẫn cài đặt và chạy sau khi pull project từ github về (Lư
 ## TRÁCH NHIỆM
 
 - Thành viên 1: Nguyễn Tiến Dũng
-    - trách nhiệm 1
-    - trách nhiệm 2
+    - back-end: trang chủ, trang quản lý hãng, liên hệ, quản lý xe, thông tin khuyến mãi.
+    - Viết nội dung report, làm slide.
 - Thành viên 2: Trương Xuân Hùng
-    - trách nhiệm 1
-    - trách nhiệm 2
+    - front-end: trang quản lý hãng, liên hệ, quản lý xe, thông tin khuyến mãi.
+    - Viết nội dung report.
 - Thành viên 3: Nguyễn Trọng Nghĩa
-    - d
-    - f
+    - front-end : Quản lý danh sách, trang thanh toán.
+    - Viết report, làm slide.
 - Thành viên 4: Lê Thanh Phúc
-    - f
-    - gg
+    - Lên ý tưởng phát triển đề tài, viết nội dung report.
+    - front-end: trang chủ.
