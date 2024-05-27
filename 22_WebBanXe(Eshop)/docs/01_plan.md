@@ -26,3 +26,4 @@ Việc triển khai website này sẽ giúp ích rất nhiều cho doanh nghiệ
     + Form đăng nhập: Đăng nhập tài khoản cho người dùng
 
 ### 1.4 Sản phẩm hoàn thiện
+Trang web xe ô tô có đầy đủ các tính năng cần thiết như xem thông tin cấu hình chiếc xe, giá cả thị trường của chiếc xe, quản lý khách hàng, quản lý kho hàng, có đầy đủ thông tin liên hệ và thanh toán sản phẩm.
