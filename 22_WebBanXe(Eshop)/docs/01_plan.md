@@ -7,9 +7,6 @@
 
 ### 1.2 Mô tả ý tưởng đề tài
 Việc triển khai website này sẽ giúp ích rất nhiều cho doanh nghiệp lẫn khách hàng trong nhu cầu mua bán xe hơi, họ không nhất thiết phải đến cửa hàng mà vẫn có thể được tư vấn và nắm rõ tất cả những thông số cũng như tình trạng xe, giá cả.
-
-Website còn cung cấp chức năng so sánh thông số của xe, giúp người dùng có thể dễ dàng so sánh các loại xe mà họ đang phân vân để từ đó cân nhắc và đưa ra lựa chọn tốt nhất trước khi đến cửa hàng trải ngiệm.
-
 ### 1.3 Sản phẩm MVP
 - Trang chủ (Home page):
     + Giới thiệu ngắn gọn về trang web
