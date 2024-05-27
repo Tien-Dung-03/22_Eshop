@@ -13,4 +13,4 @@ Sơ đồ trên Hệ quản trị CSDL
 
 Sơ đồ phân luồng màn hình ứng dụng
 
-![Sơ đồ luồng màn hinh](./images/screen-flow.png)
+![Sơ đồ luồng màn hinh](./images/screenflow.png)
