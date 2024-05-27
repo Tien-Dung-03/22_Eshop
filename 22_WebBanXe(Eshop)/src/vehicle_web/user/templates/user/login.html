@@ -1,32 +1,26 @@
+{% extends "user/index.html" %}
 {% block content %}
-	<div class="w3layoutscontaineragileits">
-	<h2>Login</h2>
-		<form action="" method="post">
-            {% csrf_token %}
-			<input type="text" placeholder="Username" name="username" class="form-control" />
-			<input type="password" placeholder="Password" name="password" class="form-control"/>
-			<ul class="agileinfotickwthree">
-				<li>
-					<input type="checkbox" id="brand1" value="">
-					<label for="brand1"><span></span>Remember me</label>
-					<a href="#">Forgot password?</a>
-				</li>
-			</ul>
-            <div class="login-message">{{ login_message }}</div>
-			<div class="aitssendbuttonw3ls">
-				<input type="submit" value="LOGIN">
-				<p> To register new account <span>→</span> <a class="w3_play_icon1" href="{% url 'register' %}"> Click Here</a></p>
-				<div class="clear"></div>
-			</div>
-		</form>
-	</div>
-<script>
-    var form_field = document.getElementsByTagName('input')
-    form_field[1].placeholder='Username...';
-    form_field[2].placeholder='Enter password';
+<form method="post">
+	<h3>Login Here</h3>
+	{% csrf_token %} 
+	<label for="username">Username</label>
+	<input type="text" placeholder="Username" id="username" name="username" class="form-control" />
 
-    for (var field in form_field){
-        form_field[field].className+= ' form-control'
-    }
-</script>
+	<label for="password">Password</label>
+	<input type="password" placeholder="Password" id="password" name="password" class="form-control"/>
+	{% if messages %}
+        <div class="login-message">
+            {% for message in messages %}
+                <p style="color: red;">{{ message }}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+	<button type="submit" value="Login">Log In</button>
+	<!-- <input type="button" value=""> -->
+	<!-- <div class="social">
+	  <div class="go"><i class="fab fa-google"></i>  Google</div>
+	  <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+	</div> -->
+	<a href="{% url 'register' %}" >Create a account</a>
+</form>
 {% endblock content %}

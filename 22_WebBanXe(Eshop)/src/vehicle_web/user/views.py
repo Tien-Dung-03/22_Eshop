@@ -7,6 +7,7 @@ from django.views.decorators.csrf import csrf_exempt, csrf_protect
 
 from django.contrib.auth import authenticate, login, logout
 from .forms import CreateUserForm
+from .models import User
 
 @csrf_exempt
 def registerPage(request):
@@ -18,6 +19,8 @@ def registerPage(request):
             form.save()
             messages.success(request, 'Đăng ký thành công')
             return redirect('login')
+        else:
+            messages.info(request, 'Có lỗi xảy ra trong quá trình đăng ký. Vui lòng kiểm tra lại thông tin.')
     
     context = {'form': form}
     return render(request, 'user/register.html', context)
