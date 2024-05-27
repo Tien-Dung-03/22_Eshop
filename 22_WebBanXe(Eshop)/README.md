@@ -22,11 +22,15 @@ Hướng dẫn cài đặt và chạy sau khi pull project từ github về (Lư
 
 ## TRÁCH NHIỆM
 
-- Thành viên 1:
+- Thành viên 1: Nguyễn Tiến Dũng
     - trách nhiệm 1
     - trách nhiệm 2
-- Thành viên 2
+- Thành viên 2: Trương Xuân Hùng
     - trách nhiệm 1
     - trách nhiệm 2
-- ...
-
+- Thành viên 3: Nguyễn Trọng Nghĩa
+    - d
+    - f
+- Thành viên 4: Lê Thanh Phúc
+    - f
+    - gg
