@@ -16,9 +16,9 @@ Hướng dẫn cài đặt và chạy sau khi pull project từ github về (Lư
 ## THÔNG TIN THÀNH VIÊN
 
 - Nguyễn Tiến Dũng - 21003901
-- Nguyễn Trọng Nghĩa - 21031271
 - Trương Xuân Hùng - 21090141
-- Họ tên sv 4 - msv
+- Nguyễn Trọng Nghĩa - 21031271
+- Lê Thanh Phúc - 21025861
 
 ## TRÁCH NHIỆM
 
