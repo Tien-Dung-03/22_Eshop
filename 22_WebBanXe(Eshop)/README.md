@@ -9,7 +9,7 @@
 ![ER Diagram](./images/image2.png)
 ![alt text](/docs/images/image3.png)
 
-![alt text](/docs/images/image4.png)
+![alt text](./docs/images/image4.png)
 
 ## CÀI ĐẶT
 
