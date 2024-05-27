@@ -2,6 +2,8 @@
 
 ### 5.1 Phân công
 
+Bảng phân chia công việc
+
 ![Phân công công việc](./images/pccv.PNG)
 
 ### 5.2 Nhật ký
