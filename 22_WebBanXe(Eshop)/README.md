@@ -53,7 +53,10 @@ Hệ thống hỗ trợ đăng nhập, đăng xuất, chăm sóc khách hàng, �
 3. **Quản lý đơn hàng**: Đặt cọc, quản lý đơn hàng cá nhân, quản lý đơn hàng đã bán.
 4. **Quản lý chăm sóc khách hàng**: Chăm sóc khách hàng, thông tin khuyến mãi.
 5. **Quản lý hệ thống**: Quản lý thông tin xe, kho hàng, nhân viên, khách hàng, thông tin khuyến mãi.
-   
+##### Đối tượng sử dụng tài liệu
+- Nhà phát triển phần mềm
+- Quản trị viên hệ thống
+- Người quản lý
 ### 2.2 Phân tích yêu cầu
 
 #### 2.2.1 Đặc tả Actors
