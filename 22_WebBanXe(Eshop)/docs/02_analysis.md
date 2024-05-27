@@ -26,6 +26,8 @@ Hệ thống hỗ trợ đăng nhập, đăng xuất, chăm sóc khách hàng, �
 - Quản trị viên hệ thống
 - Người quản lý
 ### 2.2 Phân tích yêu cầu
+##### Sơ đồ use-case:
+./images/screen-flow.png
 
 #### 2.2.1 Đặc tả Actors
 
