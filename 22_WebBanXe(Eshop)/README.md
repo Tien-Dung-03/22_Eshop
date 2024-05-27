@@ -4,9 +4,11 @@
 
 - Bạn có thể trải nghiệm ứng dụng ở đây [LINK](http://127.0.0.1:8000/)
 - Một số sceenshot của ứng dụng:
-![alt text](/docs/images/image.png)
-![alt text](/docs/images/image2.png)
+
+![ER Diagram](./images/image.png)
+![ER Diagram](./images/image2.png)
 ![alt text](/docs/images/image3.png)
+
 ![alt text](/docs/images/image4.png)
 
 ## CÀI ĐẶT
