@@ -48,10 +48,10 @@ Chỉ ra được tài liệu này dùng cho đối tượng nào?
 
 #### 2.2.1 Đặc tả Actors
 
-- Khách hàng: 
-- Nhân viên:
-- Quản trị:
-- Khách xem:
+- Actor 1 - Khách hàng: 
+- Actor 2 - Nhân viên:
+- Actor 3 - Quản trị:
+- Actor 4 - Khách xem:
 
 #### 2.2.2 Đặc tả Use-cases
 
@@ -79,12 +79,44 @@ Chỉ ra được tài liệu này dùng cho đối tượng nào?
 - Liệt kê các use-cases theo actor: (LƯU Ý: nếu phần này các chức năng thực hiện khác nhau ở mỗi actor thì ghi rõ các khác nhau đó)
     - Actor 1:
         - UC01: đăng nhập
-        - UC03: đăng bài viết
+        - UC02: Đăng xuất
+        - UC03: Chăm sóc khách hàng
+        - UC05: Dự đoán chi phí 
+        - UC06: Xem xe 
+        - UC07: Xem giá xe 
+        - UC08: So sánh xe
+        - UC09: Tìm Kiếm xe 
+        - UC10: Thông tin khuyến mãi 
+        - UC11: Quản lý đơn hàng cá nhân 
+        - UC12: Đặt cọc
     - Actor 2:
         - UC01: đăng nhập
-        - UC02: thống kê
+        - UC02: Đăng xuất
+        - UC03: Chăm sóc khách hàng
+        - UC05: Dự đoán chi phí 
+        - UC06: Xem xe 
+        - UC07: Xem giá xe 
+        - UC08: So sánh xe
+        - UC09: Tìm Kiếm xe 
+        - UC10: Thông tin khuyến mãi
+        - UC13: Quản lý đơn hàng đã bán
     - Actor 3:
-        - ...
-    - ...
+        - UC01: đăng nhập
+        - UC02: Đăng xuất
+        - UC14: Sửa thông tin xe 
+        - UC15: Xóa xe 
+        - UC16: Thêm xe 
+        - UC17: Quản lý kho hàng 
+        - UC18: Quản lý nhân viên 
+        - UC19: Quản lý khách hàng 
+        - UC20: Quản lý thông tin khuyến mãi
+    - Actor 4:
+        - UC04: Đăng kí tài khoản 
+        - UC05: Dự đoán chi phí 
+        - UC06: Xem xe 
+        - UC07: Xem giá xe 
+        - UC08: So sánh xe
+        - UC09: Tìm Kiếm xe 
+        - UC10: Thông tin khuyến mãi 
 
 ---
