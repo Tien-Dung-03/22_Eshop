@@ -1,11 +1,15 @@
 ## 3. THIẾT KẾ
 
 ### 3.1. Activity Diagram
+
 Sơ đồ Activity Diagram
+
 ![Activity Diagram](./images/ActivityDiagram1.jpg)
 
 ### 3.2. ER Diagram
+
 Sơ đồ ER Diagram
+
 ![ER Diagram](./images/er2.png)
 
 ### 3.3. Database Diagram
