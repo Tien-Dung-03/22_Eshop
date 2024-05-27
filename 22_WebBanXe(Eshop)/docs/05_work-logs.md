@@ -13,8 +13,8 @@ Bảng phân công công việc của các thành viên trong team. Thành viên
     - Vấn đề
         - Thống nhất đề tài nhưng chưa có tưởng cụ thể.
 - Tuần 21/04 - 28/04:
-      - Các thành viên đề xuất ý tưởng cho đề tài.
-      - Phân công công việc cho các thành viên.
+  - Các thành viên đề xuất ý tưởng cho đề tài.
+  - Phân công công việc cho các thành viên.
 - Tuần 28/04 - 05/05
       - Các thành viên họp nhóm zoom trình bày những khó khăn gặp phải.
       - Các thành viên hỗ trợ lẫn nhau.
