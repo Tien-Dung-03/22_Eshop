@@ -36,14 +36,24 @@ Hướng dẫn cài đặt và chạy sau khi pull project từ github về (Lư
 
 #### 2.1.1. Mục đích
 
-Mục đích của tài liệu này nhằm mô tả một cách đầy đủ và toàn diện yêu cầu của ứng dụng: các yêu cầu chức năng, yêu cầu phi chức năng, các ràng buộc về mặt thiết kế.
+Hệ thống hỗ trợ đăng nhập, đăng xuất, chăm sóc khách hàng, đăng ký tài khoản, dự đoán chi phí, xem thông tin xe, xem giá xe, so sánh xe, tìm kiếm xe, quản lý thông tin khuyến mãi, quản lý đơn hàng cá nhân, đặt cọc, quản lý đơn hàng đã bán, sửa thông tin xe, xóa xe, thêm xe, quản lý kho hàng, quản lý nhân viên và quản lý khách hàng. Các chức năng này phải đảm bảo hiệu suất, bảo mật, khả dụng, khả năng mở rộng và dễ sử dụng. Giao diện tiêu chuẩn, tích hợp dịch vụ ngoài và tương thích với các trình duyệt phổ biến.
 
 #### 2.1.2 Phạm vi
 
-Mô tả ngắn gọn đặc điểm của ứng dụng; phạm vi, đối tượng phục vụ của ứng dụng; nhóm các hệ thống con
-Chỉ ra được tài liệu này dùng cho đối tượng nào?
+##### Đặc điểm của ứng dụng
+Ứng dụng là một hệ thống quản lý và bán xe trực tuyến, cung cấp các chức năng như đăng nhập, đăng xuất, đăng ký tài khoản, dự đoán chi phí xe, xem thông tin xe, so sánh xe, tìm kiếm xe, quản lý đơn hàng và chăm sóc khách hàng. Ngoài ra, hệ thống còn hỗ trợ quản lý thông tin nhân viên, khách hàng, kho hàng và các chương trình khuyến mãi.
 
+##### Phạm vi và đối tượng phục vụ của ứng dụng
+- **Phạm vi**: Ứng dụng phục vụ việc quản lý và bán xe trực tuyến, hỗ trợ khách hàng, nhân viên và quản trị viên trong việc tìm kiếm, mua bán, quản lý và chăm sóc xe.
+- **Đối tượng phục vụ**: Khách hàng (người mua xe), nhân viên (người tư vấn và bán xe), quản trị viên (người quản lý hệ thống và dữ liệu).
 
+##### Nhóm các hệ thống con
+1. **Quản lý người dùng**: Đăng nhập, đăng xuất, đăng ký tài khoản.
+2. **Quản lý xe**: Xem thông tin xe, dự đoán chi phí, xem giá xe, so sánh xe, tìm kiếm xe.
+3. **Quản lý đơn hàng**: Đặt cọc, quản lý đơn hàng cá nhân, quản lý đơn hàng đã bán.
+4. **Quản lý chăm sóc khách hàng**: Chăm sóc khách hàng, thông tin khuyến mãi.
+5. **Quản lý hệ thống**: Quản lý thông tin xe, kho hàng, nhân viên, khách hàng, thông tin khuyến mãi.
+   
 ### 2.2 Phân tích yêu cầu
 
 #### 2.2.1 Đặc tả Actors
