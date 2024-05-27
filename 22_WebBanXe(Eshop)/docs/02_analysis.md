@@ -4,12 +4,12 @@
 
 #### 2.1.1. Mục đích
 
-Hệ thống hỗ trợ đăng nhập, đăng xuất, chăm sóc khách hàng, đăng ký tài khoản, dự đoán chi phí, xem thông tin xe, xem giá xe, so sánh xe, tìm kiếm xe, quản lý thông tin khuyến mãi, quản lý đơn hàng cá nhân, đặt cọc, quản lý đơn hàng đã bán, sửa thông tin xe, xóa xe, thêm xe, quản lý kho hàng, quản lý nhân viên và quản lý khách hàng. Các chức năng này phải đảm bảo hiệu suất, bảo mật, khả dụng, khả năng mở rộng và dễ sử dụng. Giao diện tiêu chuẩn, tích hợp dịch vụ ngoài và tương thích với các trình duyệt phổ biến.
+Hệ thống hỗ trợ đăng nhập, đăng xuất, chăm sóc khách hàng, đăng ký tài khoản, dự đoán chi phí, xem thông tin xe, xem giá xe, tìm kiếm xe, quản lý thông tin khuyến mãi, quản lý đơn hàng cá nhân, đặt cọc, quản lý đơn hàng đã bán, sửa thông tin xe, xóa xe, thêm xe, quản lý kho hàng, quản lý nhân viên và quản lý khách hàng. Các chức năng này phải đảm bảo hiệu suất, bảo mật, khả dụng, khả năng mở rộng và dễ sử dụng. Giao diện tiêu chuẩn, tích hợp dịch vụ ngoài và tương thích với các trình duyệt phổ biến.
 
 #### 2.1.2 Phạm vi
 
 ##### Đặc điểm của ứng dụng
-Ứng dụng là một hệ thống quản lý và bán xe trực tuyến, cung cấp các chức năng như đăng nhập, đăng xuất, đăng ký tài khoản, dự đoán chi phí xe, xem thông tin xe, so sánh xe, tìm kiếm xe, quản lý đơn hàng và chăm sóc khách hàng. Ngoài ra, hệ thống còn hỗ trợ quản lý thông tin nhân viên, khách hàng, kho hàng và các chương trình khuyến mãi.
+Ứng dụng là một hệ thống quản lý và bán xe trực tuyến, cung cấp các chức năng như đăng nhập, đăng xuất, đăng ký tài khoản, dự đoán chi phí xe, xem thông tin xe, tìm kiếm xe, quản lý đơn hàng và chăm sóc khách hàng. Ngoài ra, hệ thống còn hỗ trợ quản lý thông tin nhân viên, khách hàng, kho hàng và các chương trình khuyến mãi.
 
 ##### Phạm vi và đối tượng phục vụ của ứng dụng
 - **Phạm vi**: Ứng dụng phục vụ việc quản lý và bán xe trực tuyến, hỗ trợ khách hàng, nhân viên và quản trị viên trong việc tìm kiếm, mua bán, quản lý và chăm sóc xe.
@@ -17,7 +17,7 @@ Hệ thống hỗ trợ đăng nhập, đăng xuất, chăm sóc khách hàng, �
 
 ##### Nhóm các hệ thống con
 1. **Quản lý người dùng**: Đăng nhập, đăng xuất, đăng ký tài khoản.
-2. **Quản lý xe**: Xem thông tin xe, dự đoán chi phí, xem giá xe, so sánh xe, tìm kiếm xe.
+2. **Quản lý xe**: Xem thông tin xe, dự đoán chi phí, xem giá xe, tìm kiếm xe.
 3. **Quản lý đơn hàng**: Đặt cọc, quản lý đơn hàng cá nhân, quản lý đơn hàng đã bán.
 4. **Quản lý chăm sóc khách hàng**: Chăm sóc khách hàng, thông tin khuyến mãi.
 5. **Quản lý hệ thống**: Quản lý thông tin xe, kho hàng, nhân viên, khách hàng, thông tin khuyến mãi.
@@ -46,7 +46,6 @@ Hệ thống hỗ trợ đăng nhập, đăng xuất, chăm sóc khách hàng, �
     - UC05: Dự đoán chi phí (Mô tả: Tạo dự đoán trước tổng giá trị chiếc xe sau khi mua.)
     - UC06: Xem xe (Mô tả: xem thông tin chiếc xe.)
     - UC07: Xem giá xe (Mô tả: Xem trước thông tin giá cả của chiếc xe)
-    - UC08: So sánh xe (Mô tả: Xem thông tin xe này song song với xe khác.)
     - UC09: Tìm Kiếm xe (Mô tả: kiếm chiếc xe dựa theo tên)
     - UC10: Thông tin khuyến mãi (Mô tả: xem các thông báo và các chương trình ưu đãi dành cho các khách hàng)
     - UC11: Quản lý đơn hàng cá nhân (Mô tả: xem thông tin đơn hàng của đơn hàng)
@@ -67,7 +66,6 @@ Hệ thống hỗ trợ đăng nhập, đăng xuất, chăm sóc khách hàng, �
         - UC05: Dự đoán chi phí 
         - UC06: Xem xe 
         - UC07: Xem giá xe 
-        - UC08: So sánh xe
         - UC09: Tìm Kiếm xe 
         - UC10: Thông tin khuyến mãi 
         - UC11: Quản lý đơn hàng cá nhân 
@@ -79,7 +77,6 @@ Hệ thống hỗ trợ đăng nhập, đăng xuất, chăm sóc khách hàng, �
         - UC05: Dự đoán chi phí 
         - UC06: Xem xe 
         - UC07: Xem giá xe 
-        - UC08: So sánh xe
         - UC09: Tìm Kiếm xe 
         - UC10: Thông tin khuyến mãi
         - UC13: Quản lý đơn hàng đã bán
@@ -98,6 +95,5 @@ Hệ thống hỗ trợ đăng nhập, đăng xuất, chăm sóc khách hàng, �
         - UC05: Dự đoán chi phí 
         - UC06: Xem xe 
         - UC07: Xem giá xe 
-        - UC08: So sánh xe
         - UC09: Tìm Kiếm xe 
         - UC10: Thông tin khuyến mãi 
