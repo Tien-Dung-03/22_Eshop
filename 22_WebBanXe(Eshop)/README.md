@@ -1,6 +1,6 @@
 # Tên ứng dụng
 
-- Mô tả vắn tắt tên ứng dụng ở đây (Gợi ý: ứng dụng giải quyết vấn đề gì, có các đối tượng người dùng như thế nào, có các chức năng gì...)
+- Web bán xe ô tô (Gợi ý: ứng dụng giải quyết vấn đề gì, có các đối tượng người dùng như thế nào, có các chức năng gì...)
 
 - Bạn có thể trải nghiệm ứng dụng ở đây [LINK](https://update-this-link)
 - Một số sceenshot của ứng dụng
