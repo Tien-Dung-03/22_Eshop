@@ -1,6 +1,7 @@
 ## 3. THIẾT KẾ
 
 ### 3.1. Activity Diagram
+![Activity Diagram](./images/ActivityDiagram.png)
 
 ### 3.2. ER Diagram
 ![ER Diagram](./images/er2.png)
