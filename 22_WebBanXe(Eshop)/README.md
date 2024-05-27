@@ -45,5 +45,6 @@ Hướng dẫn cài đặt và chạy sau khi pull project từ github về (Lư
     - front-end : Quản lý danh sách, trang thanh toán.
     - Viết report, làm slide.
 - Thành viên 4: Lê Thanh Phúc
-    - Lên ý tưởng phát triển đề tài, viết nội dung report.
+    - Lên ý tưởng phát triển đề tài,
+    - viết nội dung report.
     - front-end: trang chủ.
