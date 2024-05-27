@@ -3,6 +3,7 @@
 ### 3.1. Activity Diagram
 
 ### 3.2. ER Diagram
+![ER Diagram](./images/er2.png)
 
 ### 3.3. Database Diagram
 
