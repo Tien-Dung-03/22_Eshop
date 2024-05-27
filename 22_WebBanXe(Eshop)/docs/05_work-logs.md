@@ -8,11 +8,14 @@ Bảng phân công công việc của các thành viên trong team. Thành viên
 
 - Tuần 15/04 - 21/04: 
     - Thực hiện
-        - Thực hiện công việc 1: thành viên A
-        - Thực hiện công việc 2: thành viên B
+        - Họp nhóm trực tiếp tại trường chọn đề tài.
+        - Các thành viên đề xuất ý tưởng chọn đề tài.
     - Vấn đề
-        - Vấn đề 1
-        - Vấn đề 2
-- Tuần 21/04 - 28/04: 
-
-...
+        - Thống nhất đề tài nhưng chưa có tưởng cụ thể.
+- Tuần 21/04 - 28/04:
+      - Thực hiện
+          - Các thành viên đề xuất ý tưởng cho đề tài.
+          - Phân công công việc cho các thành viên.
+- Tuần 28/04 - 05/05
+      - Thực hiện
+          - Các thành viên họp nhóm zoom 
