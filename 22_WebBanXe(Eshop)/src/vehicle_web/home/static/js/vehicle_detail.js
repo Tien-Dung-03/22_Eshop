@@ -108,22 +108,7 @@ function showFilteredProducts(products) {
     }
     document.getElementById('product-list').innerHTML = html;
 }
-// function showFilteredProducts(products) {
-//     var html = '';
-//     if (products.length !== 0) {
-//         products.forEach(product => {
-//             html += `<div class="col-md-4 col-sm-6 card">
-//                         <img src="${product.image}" alt="">
-//                         <p>${product.title}</p>
-//                         <h6>Giá chỉ từ: <span>${product.price}</span></h6>
-//                         <button class="btn btn-product" onclick="redirectToDetail(${product.id})"><span>Chi tiết</span></button>
-//                     </div>`;
-//         });
-//     } else {
-//         html += `<h1>Danh sách trống</h1>`;
-//     }
-//     document.getElementById('product-list').innerHTML = html;
-// }
+
 /* *****************************Hàm Load Product******************************** */
 function loadProducts() {
     fetch("/api/vehicles/")
@@ -143,22 +128,47 @@ function loadProducts() {
 }
 loadProducts();
 
-/* *****************************Hàm Add Cart******************************** */
+// Thêm hàm addToCart để xử lý sự kiện thêm vào giỏ hàng
 function addToCart(productId) {
-    $.ajax({
-        type: 'POST',
-        url: `/api/cart/add/`,  // Assuming you have an API endpoint to add items to the cart
-        data: {
-            product_id: productId
+    fetch(`/cart/add/${productId}/`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': getCookie('csrftoken')  // Đảm bảo CSRF token được gửi đi
         },
-        success: function(response) {
-            alert('Product added to cart successfully!');
-        },
-        error: function(xhr, status, error) {
-            var errorMessage = xhr.responseJSON ? xhr.responseJSON.detail : 'An error occurred';
-            alert(errorMessage);
+        credentials: 'same-origin'  // Đảm bảo sử dụng cùng một nguồn gốc cho session
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
         }
+        return response.json();
+    })
+    .then(data => {
+        // Xử lý kết quả nếu cần thiết
+        console.log('Success:', data);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        // Hiển thị thông báo lỗi trên giao diện người dùng nếu cần thiết
     });
+}
+
+// Hàm lấy giá trị của CSRF token
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            // Xác định nếu cookie có tên là `name`
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
 }
 
 function loadNewVehicles() {

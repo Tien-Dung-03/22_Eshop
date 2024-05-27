@@ -1,35 +1,155 @@
-{% extends "home/base.html" %}
+{% extends 'home/base.html' %}
 {% load static %}
-{% block title %}NS Car{% endblock title %}
+{% block title %}
+  NS Car
+{% endblock %}
 
 {% block content %}
-    <div class="content-container">
-        <div class="content">
-            <div style="width: 60%; margin: auto" class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Tìm kiếm theo tên xe" id="search-input" />
-                <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="button" id="search-button">Tìm kiếm</button>
-                </div>
-            </div>
-            {% comment %} <nav aria-label="Page navigation">
-                <ul style="margin-bottom: 0" class="pagination justify-content-center" id="pagination">
-                    <!-- Các nút phân trang sẽ được thêm vào đây -->
-                </ul>
-            </nav> {% endcomment %}
-            <div class="row" id="product-list">
-                <!-- Các card sẽ được chèn ở đây -->
-            </div>
-            {% comment %} <nav aria-label="Page navigation">
-                <ul class="pagination justify-content-center" id="pagination">
-                    <!-- Các nút phân trang sẽ được thêm vào đây -->        
-                </ul>
-            </nav> {% endcomment %}
+  <div class="content-container">
+    <div class="content">
+      <div style="width: 60%; margin: auto" class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Tìm kiếm theo tên xe" id="search-input" />
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" id="search-button">Tìm kiếm</button>
         </div>
+      </div>
+      <div class="row" id="product-list">
+        <!-- Các card sẽ được chèn ở đây -->
+      </div>
     </div>
-    <div class="about">
-        <h2>Các tin tức liên quan</h2>
-        <div id="carousel" class="row">
-            <!-- Các card sẽ được chèn ở đây -->
-        </div>
+  </div>
+  <div class="about">
+    <h2>Các tin tức liên quan</h2>
+    <div id="carousel" class="row">
+      <!-- Các card sẽ được chèn ở đây -->
     </div>
-{% endblock content %}
+  </div>
+  <script>
+    const newsPerPage = 4;
+    let currentPage = 0;
+    
+    const news = [
+      {
+        title: 'EQS Sedan',
+        description: 'Chọn cấu hình chiếc xe mơ ước của bạn ngay.',
+        image: '{% static 'images/news1.avif' %}'
+      },
+      {
+        title: 'MercedesTrophy Việt Nam',
+        description: 'Cập nhật thông tin chính thức về lịch thi đấu các mùa giải Golf MercedesTrophy 2024.',
+        image: '{% static 'images/news2.avif' %}'
+      },
+      {
+        title: 'Mercedes-Benz GLC mới',
+        description: 'Khám phá GLC thế hệ mới - mẫu xe mang đậm nét hiện đại, thể thao, vốn là dấu ấn đặc trưng của các dòng SUV từ Mercedes-Benz.',
+        image: '{% static 'images/news3.avif' %}'
+      },
+      {
+        title: 'Mercedes-AMG SL 43',
+        description: 'AMG SL làm sống dậy vẻ kinh điển của tay chơi Roadster trong một diện mạo mới.',
+        image: '{% static 'images/news4.avif' %}'
+      },
+      {
+        title: 'Vito Tourer',
+        description: 'Khởi đầu những hành trình mới trên Vito Tourer – luôn đủ chỗ cho tất cả.',
+        image: '{% static 'images/news5.avif' %}'
+      },
+      {
+        title: 'Khám phá xe Mercedes-Benz trên cửa hàng trực tuyến Online Store',
+        description: 'Nhanh chóng & Thuận tiện - Khám phá các mẫu xe hiện có tại Nhà phân phối trên toàn quốc.',
+        image: '{% static 'images/news6.avif' %}'
+      },
+      {
+        title: 'Các dòng xe thuần điện EQ từ Mercedes-Benz',
+        description: 'Tương lai di chuyển thuần điện xuất phát từ cam kết phát triển bền vững của Mercedes-Benz.',
+        image: '{% static 'images/news7.avif' %}'
+      },
+      {
+        title: 'Mercedes-AMG: 55 năm hiệu suất lái',
+        description: 'Mercedes-AMG đổi mới trên mọi hành trình khi vẫn giữ vững tinh thần làm chủ cuộc chơi.',
+        image: '{% static 'images/news8.avif' %}'
+      }
+    ];
+    
+    const carousel = document.getElementById('carousel');
+    
+    function showPage(page) {
+      carousel.innerHTML = '';
+    
+      // Create control buttons
+      const controls = document.createElement('div');
+      controls.className = 'controls';
+    
+      const prevBtn = document.createElement('button');
+      prevBtn.id = 'prevBtn';
+      prevBtn.className = 'btn btn-primary';
+      prevBtn.innerHTML = '<i class="ti-angle-left"></i>';
+      prevBtn.addEventListener('click', showPrevPage);
+    
+      const nextBtn = document.createElement('button');
+      nextBtn.id = 'nextBtn';
+      nextBtn.className = 'btn btn-primary';
+      nextBtn.innerHTML = '<i class="ti-angle-right"></i>';
+      nextBtn.addEventListener('click', showNextPage);
+    
+      controls.appendChild(prevBtn);
+      controls.appendChild(nextBtn);
+    
+      carousel.appendChild(controls);
+    
+      const startItemIndex = page * newsPerPage;
+      const endItemIndex = Math.min(startItemIndex + newsPerPage, news.length);
+    
+      for (let i = startItemIndex; i < endItemIndex; i++) {
+        const item = news[i];
+        const card = document.createElement('div');
+        card.classList.add('col-md-3', 'card', 'news-card');
+    
+        const img = document.createElement('img');
+        img.classList.add('card-img-top');
+        img.src = item.image;
+        img.alt = item.title;
+    
+        const cardBody = document.createElement('div');
+        cardBody.classList.add('card-body');
+    
+        const title = document.createElement('h5');
+        title.classList.add('card-title');
+        title.textContent = item.title;
+    
+        const description = document.createElement('p');
+        description.classList.add('card-text');
+        description.textContent = item.description;
+    
+        cardBody.appendChild(title);
+        cardBody.appendChild(description);
+    
+        card.appendChild(img);
+        card.appendChild(cardBody);
+    
+        carousel.appendChild(card);
+      }
+    
+      // Disable buttons if on the first or last page
+      prevBtn.disabled = page === 0;
+      nextBtn.disabled = page === numPages - 1;
+    }
+    
+    function showNextPage() {
+      if (currentPage < numPages - 1) {
+        currentPage++;
+        showPage(currentPage);
+      }
+    }
+    
+    function showPrevPage() {
+      if (currentPage > 0) {
+        currentPage--;
+        showPage(currentPage);
+      }
+    }
+    
+    // Initialize the carousel with the first page
+    showPage(currentPage);
+  </script>
+{% endblock %}

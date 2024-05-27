@@ -75,7 +75,10 @@
                     <a href="#" class="hang-xe" data-hang="mercedes" id="mercedes">Mercedes</a>
                   </li>
                   <li>
-                    <a href="#" class="hang-xe" data-hang="bmw" id="bmw">BMW</a>
+                    <a href="#" class="hang-xe" data-hang="amg" id="amg">AMG</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hang-xe" data-hang="maybach" id="maybach">Maybach</a>
                   </li>
                   <!-- Thêm các hãng xe khác -->
                 </ul>
@@ -109,7 +112,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hello, {{ user.username }}</a>
                 <div class="dropdown-menu" aria-labelledby="userDropdown">
-                  <a class="dropdown-item" href="#">Giỏ hàng</a>
+                  <a class="dropdown-item" href="{% url 'cart:view_cart' %}">Giỏ hàng</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="{% url 'logout' %}">Đăng xuất</a>
                 </div>
@@ -211,7 +214,6 @@
     <script src="{% static 'js/home.js' %}"></script>
     <script src="{% static 'js/vehicle_detail.js' %}"></script>
     <script src="{% static 'js/login.js' %}"></script>
-    {% comment %} <script src="{% static 'js/payment.js' %}"></script> {% endcomment %}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
       $(document).ready(function () {

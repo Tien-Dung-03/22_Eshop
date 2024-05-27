@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Shopping Cart</title>
+    <style>
+        /* CSS styles for flex container and items */
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            list-style: none;
+            padding: 0;
+        }
+
+        .product-item {
+            flex: 0 0 calc(33.33% - 20px); /* Each item takes about 33.33% width with margins */
+            margin: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .product-item p {
+            margin: 5px 0;
+        }
+
+        .product-item a {
+            display: inline-block;
+            margin-top: 5px;
+            background-color: #dc3545;
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .total-price {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .continue-shopping {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Your Shopping Cart</h1>
+
+    <div class="product-list">
+        {% for item in cart_items %}
+        <div class="product-item">
+            <p>{{ item.vehicle.name }} ({{ item.quantity }})</p>
+            <p>Price: ${{ item.vehicle.price }}</p>
+            <a href="{% url 'cart:remove_from_cart' item.id %}">Remove</a>
+        </div>
+        {% empty %}
+        <p>Your cart is empty.</p>
+        {% endfor %}
+    </div>
+
+    <p class="total-price">Total Price: ${{ total_price }}</p>
+
+    <a class="continue-shopping" href="{% url 'home' %}">Continue Shopping</a>
+
+</body>
+
+</html>
