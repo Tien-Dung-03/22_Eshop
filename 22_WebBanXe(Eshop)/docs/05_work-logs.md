@@ -2,7 +2,7 @@
 
 ### 5.1 Phân công
 
-Bảng phân công công việc của các thành viên trong team. Thành viên nào làm những gì
+
 
 ### 5.2 Nhật ký
 
