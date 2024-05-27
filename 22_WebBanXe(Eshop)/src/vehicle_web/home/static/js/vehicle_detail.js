@@ -1,6 +1,7 @@
 // JavaScript
 document.addEventListener('DOMContentLoaded', function () {
     const detailButtons = document.querySelectorAll('.btn-product');
+    const hangXeLinks = document.querySelectorAll('.hang-xe');
 
     detailButtons.forEach(button => {
         button.addEventListener('click', function (event) {
@@ -10,9 +11,22 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    hangXeLinks.forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const hangXe = this.dataset.hang;
+            searchProducts(hangXe);
+        });
+    });
+
     document.getElementById('search-button').addEventListener('click', function () {
         const searchTerm = document.getElementById('search-input').value.toLowerCase();
         searchProducts(searchTerm);
+    });
+
+    document.getElementById('load-new-vehicles').addEventListener('click', function (event) {
+        event.preventDefault();
+        loadNewVehicles();
     });
 });
 
@@ -36,6 +50,23 @@ function searchProducts(searchTerm) {
 function redirectToDetail(vehicleId) {
     window.location.href = `/api/vehicle/${vehicleId}/`;
 }
+
+// function searchProductsByCompany(company) {
+//     fetch(`/api/vehicles/?search=${company}`)
+//         .then(response => {
+//             if (!response.ok) {
+//                 throw new Error('Network response was not ok');
+//             }
+//             return response.json();
+//         })
+//         .then(products => {
+//             showFilteredProducts(products);
+//         })
+//         .catch(error => {
+//             console.error('Error:', error);
+//             // Hiển thị thông báo lỗi trên giao diện người dùng nếu cần thiết
+//         });
+// }
 
 // function searchProductsById(vehicleId) {
 //     fetch(`/api/vehicle/${vehicleId}/`)
@@ -131,18 +162,17 @@ function addToCart(productId) {
 }
 
 function loadNewVehicles() {
-    fetch("/api/vehicles/")
+    fetch("/api/vehicles/recent/")
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
             return response.json();
         })
-        .then(vehicles => {
-            showFilteredProducts(vehicles);
+        .then(products => {
+            showFilteredProducts(products);
         })
         .catch(error => {
             console.error('Error:', error);
-            // Handle error, show message to the user if needed
         });
 }

@@ -45,7 +45,7 @@
               <a href="{% url 'home' %}">Trang Chủ</a>
             </li>
             <!-- Loại xe -->
-            <li>
+            {% comment %} <li>
               <a href="#" id="loai-xe-menu">Loại xe <i class="ti-angle-down"></i></a>
               <div class="sub-menu">
                 <ul>
@@ -66,24 +66,24 @@
                   </li>
                 </ul>
               </div>
-            </li>
+            </li> {% endcomment %}
             <!-- Hãng xe -->
             <li>
               <a href="#" id="hang-xe-menu">Hãng xe <i class="ti-angle-down"></i></a>
               <div style="left: 18vw" class="sub-menu">
                 <ul>
                   <li>
-                    <a href="#" class="hang-xe" data-hang="mercedes">Mercedes</a>
+                    <a href="#" class="hang-xe" data-hang="mercedes" id="mercedes">Mercedes</a>
                   </li>
                   <li>
-                    <a href="#" class="hang-xe" data-hang="bmw">BMW</a>
+                    <a href="#" class="hang-xe" data-hang="bmw" id="bmw">BMW</a>
                   </li>
                   <!-- Thêm các hãng xe khác -->
                 </ul>
               </div>
             </li>
             <li>
-              <a href="#"  id="load-new-vehicles" onclick="loadNewVehicles(); return false;">
+              <a href="#" id="load-new-vehicles">
                 Mới cập nhật
                 <img style="width: 2rem; height: 2rem; float: right; padding-left: 0.25rem" src="{% static 'images/new.jpg.gif' %}" alt="" />
               </a>
@@ -91,10 +91,29 @@
             <li>
               <a href="#main-footer">Liên Hệ</a>
             </li>
-            {% if user.is_authenticated %}
+            {% comment %} {% if user.is_authenticated %}
               <li>Hello, {{ user.username }}</li>
               <li>
                 <a href="{% url 'logout' %}">Đăng xuất</a>
+              </li>
+            {% else %}
+              <li>
+                <a href="{% url 'login' %}">Đăng nhập</a>
+              </li>
+            {% endif %} {% endcomment %}
+            {% if user.is_authenticated %}
+              {% if user.is_superuser %}
+                <li>
+                  <a href="{% url 'admin:index' %}">Quản lý</a>
+                </li>
+              {% endif %}
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hello, {{ user.username }}</a>
+                <div class="dropdown-menu" aria-labelledby="userDropdown">
+                  <a class="dropdown-item" href="#">Giỏ hàng</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="{% url 'logout' %}">Đăng xuất</a>
+                </div>
               </li>
             {% else %}
               <li>
@@ -205,10 +224,10 @@
             })
         }, 2000) // 5 giây
       })
-      document.getElementById('load-new-vehicles').addEventListener('click', function(event) {
-        event.preventDefault();
-        loadNewVehicles(); 
-      });
+      document.getElementById('load-new-vehicles').addEventListener('click', function (event) {
+        event.preventDefault()
+        loadNewVehicles()
+      })
     </script>
   </body>
 </html>

@@ -2,6 +2,8 @@ from .models import Vehicle, VehicleDetail
 from rest_framework import serializers, viewsets, filters, status
 from rest_framework.response import Response
 from rest_framework.decorators import action
+from django.utils import timezone
+from datetime import timedelta
 import django_filters
 from django_filters.rest_framework import DjangoFilterBackend
 
@@ -38,8 +40,15 @@ class VehicleViewSet(viewsets.ModelViewSet):
     serializer_class = VehicleSerializer
     filter_backends = [DjangoFilterBackend, filters.SearchFilter]
     filterset_class = VehiclePriceFilter
-    filterset_fields = ['status'] # Tìm kiếm theo trạng thái
-    search_fields = ['title', 'price'] # Tìm kiếm theo tên và mô tả
+    filterset_fields = ['status'] # Tìm kiếm theo trạng thái và hãng xe
+    search_fields = ['title', 'price', 'company'] # Tìm kiếm theo tên và mô tả và hãng xe
+    
+    @action(detail=False, methods=['get'])
+    def recent(self, request):
+        three_days_ago = timezone.now() - timedelta(days=3)
+        recent_vehicles = Vehicle.objects.filter(created_at__gte=three_days_ago)
+        serializer = self.get_serializer(recent_vehicles, many=True)
+        return Response(serializer.data)
 
 class VehicleDetailViewSet(viewsets.ModelViewSet):
     queryset = VehicleDetail.objects.all()

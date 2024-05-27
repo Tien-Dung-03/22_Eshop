@@ -35,12 +35,3 @@ def vehicle_detail(request, vehicle_id):
 #     except Exception as e:
 #         messages.warning(request, 'Chưa có sản phẩm mới!!!')
 #         return redirect('home')
-def load_new_vehicles(request):
-    try:
-        start_date = timezone.now() - timedelta(days=3)
-        end_date = timezone.now() + timedelta(days=3)
-        new_vehicles = Vehicle.objects.filter(created_at__range=[start_date, end_date])
-        serializer = VehicleSerializer(new_vehicles, many=True) 
-        return JsonResponse(serializer.data, safe=False)
-    except Exception as e:
-        return JsonResponse({'error': 'Chưa có sản phẩm mới!!!'}, status=500)
