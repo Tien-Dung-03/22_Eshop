@@ -1,6 +1,6 @@
 # Tên ứng dụng
 
-- Web bán xe ô tô (Gợi ý: ứng dụng giải quyết vấn đề gì, có các đối tượng người dùng như thế nào, có các chức năng gì...)
+- Web bán xe ô tô 
 
 - Bạn có thể trải nghiệm ứng dụng ở đây [LINK](http://127.0.0.1:8000/)
 - Một số sceenshot của ứng dụng:
