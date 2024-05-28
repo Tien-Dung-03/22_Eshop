@@ -1,0 +1,9 @@
+{% comment %} {% extends "home/base.html" %} {% endcomment %}
+{% block content %}    
+    {{ message }}
+
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Add to Cart">
+    </form>
+{% endblock %}

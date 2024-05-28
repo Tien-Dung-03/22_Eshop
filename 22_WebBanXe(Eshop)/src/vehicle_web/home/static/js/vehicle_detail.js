@@ -97,7 +97,7 @@ function showFilteredProducts(products) {
                             <button class="btn btn-product" onclick="redirectToDetail(${product.id})">
                                 <span>Chi tiết</span>
                             </button>
-                            <button class="btn btn-product" onclick="addToCart(${product.id})">
+                            <button class="btn btn-product">
                                 <i class="fas fa-shopping-cart"></i> Thêm vào giỏ hàng
                             </button>
                         </div>
@@ -127,49 +127,6 @@ function loadProducts() {
         });
 }
 loadProducts();
-
-// Thêm hàm addToCart để xử lý sự kiện thêm vào giỏ hàng
-function addToCart(productId) {
-    fetch(`/cart/add/${productId}/`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'X-CSRFToken': getCookie('csrftoken')  // Đảm bảo CSRF token được gửi đi
-        },
-        credentials: 'same-origin'  // Đảm bảo sử dụng cùng một nguồn gốc cho session
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
-    .then(data => {
-        // Xử lý kết quả nếu cần thiết
-        console.log('Success:', data);
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        // Hiển thị thông báo lỗi trên giao diện người dùng nếu cần thiết
-    });
-}
-
-// Hàm lấy giá trị của CSRF token
-function getCookie(name) {
-    let cookieValue = null;
-    if (document.cookie && document.cookie !== '') {
-        const cookies = document.cookie.split(';');
-        for (let i = 0; i < cookies.length; i++) {
-            const cookie = cookies[i].trim();
-            // Xác định nếu cookie có tên là `name`
-            if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                break;
-            }
-        }
-    }
-    return cookieValue;
-}
 
 function loadNewVehicles() {
     fetch("/api/vehicles/recent/")

@@ -25,13 +25,3 @@ def vehicle_detail(request, vehicle_id):
         messages.warning(request, 'Sản phẩm chưa có thông tin chi tiết.')
         return redirect('home')
     return render(request, 'vehicle/vehicle_detail.html', {'vehicle': vehicle, 'vehicle_detail': vehicle_detail})
-
-# def load_new_vehicles(request):
-#     try:
-#         start_date = timezone.now() - timedelta(days=3)
-#         end_date = timezone.now() + timedelta(days=3)
-#         new_vehicles = Vehicle.objects.filter(created_at__range=[start_date, end_date])
-#         return render(request, 'vehicle/vehicle.html', {'new_vehicles': new_vehicles})
-#     except Exception as e:
-#         messages.warning(request, 'Chưa có sản phẩm mới!!!')
-#         return redirect('home')
